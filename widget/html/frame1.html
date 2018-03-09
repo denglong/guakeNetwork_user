@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-flex.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <style type="text/css">
+    .childDiv {
+        float: left;
+        width: 25%;
+        height: 100%;
+    }
+
+    .testTitle {
+        font-size: 14px;
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        margin-top: 8px;
+        color: #666;
+    }
+
+    .headerLine {
+        height: 2px;
+        width: 100%;
+        background-color: #999;
+    }
+
+    .middleChildDiv {
+      float: left;
+      width: 25%;
+      height: 100%;
+    }
+
+    .middleTestTitle {
+      font-size: 13px;
+      text-align: center;
+      width: 80%;
+      height: 25px;
+      margin-left: 10%;
+      color: #666;
+      border-radius: 15px;
+      background-color: white;
+      padding-top: 3px;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="aui-content">
+        <div id="aui-slide">
+            <div class="aui-slide-wrap">
+                <div class="aui-slide-node">
+                    <img src="../image/demo/b1.jpg" />
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../image/demo/b2.jpg" />
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../image/demo/b3.jpg" />
+                </div>
+            </div>
+            <div class="aui-slide-page-wrap">
+                <!--分页容器-->
+            </div>
+        </div>
+    </section>
+    <div class="container aui-margin-b-10" style="width:100%; height:40px; overflow:hidden; zoom:1; background-color:white;">
+        <div class="childDiv" onclick="clickHeaderAction(0)">
+            <p class="testTitle">享美食</p>
+            <div class="headerLine" id="headerLine"></div>
+        </div>
+        <div class="childDiv" onclick="clickHeaderAction(1)">
+            <p class="testTitle">住酒店</p>
+            <div class="headerLine" id="headerLine1" hidden="hidden"></div>
+        </div>
+        <div class="childDiv" onclick="clickHeaderAction(2)">
+            <p class="testTitle">爱玩乐</p>
+            <div class="headerLine" id="headerLine2" hidden="hidden"></div>
+        </div>
+        <div class="childDiv" onclick="clickHeaderAction(3)">
+            <p class="testTitle">全部</p>
+            <div class="headerLine" id="headerLine3" hidden="hidden"></div>
+        </div>
+    </div>
+    <div class="container aui-margin-b-5" style="width:100%; height:30px;">
+      <div class="middleChildDiv">
+          <p class="middleTestTitle" style="background-color:red; color:white;">热门</p>
+      </div>
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">小吃快餐</p>
+      </div>
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">面包甜点</p>
+      </div>
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">川菜</p>
+      </div>
+
+    </div>
+    <div class="container aui-margin-b-5" style="width:100%; height:30px;">
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">西北菜</p>
+      </div>
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">东北菜</p>
+      </div>
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">湘菜</p>
+      </div>
+      <div class="middleChildDiv">
+          <p class="middleTestTitle">北京菜</p>
+      </div>
+
+    </div>
+    <div class="aui-content aui-margin-b-15">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo5.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">流浪男</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo1.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">张三</div>
+                            <div class="aui-list-item-right">1天前</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo4.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">李四</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo4.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">李四</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo4.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">李四</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-slide.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+
+        //createLoopImageAction();
+    };
+
+    //创建轮播图
+    function createLoopImageAction() {
+
+        var slide = new auiSlide({
+            container: document.getElementById("aui-slide"),
+            "height": api.winWidth / 3,
+        })
+
+        var UIScrollPicture = api.require('UIScrollPicture');
+        UIScrollPicture.open({
+            rect: {
+                x: 0,
+                y: 0,
+                w: api.winWidth,
+                h: api.winWidth / 3
+            },
+            data: {
+                paths: [
+                    'widget://image/apicloud-bg.png',
+                    'widget://image/apicloud-bg.png',
+                    'widget://image/apicloud-bg.png',
+                    'widget://image/apicloud-bg.png'
+                ],
+                // captions: ['apicloud', 'apicloud', 'apicloud', 'apicloud']
+            },
+            styles: {
+                caption: {
+                    height: 35,
+                    color: '#E0FFFF',
+                    size: 13,
+                    bgColor: '#696969',
+                    position: 'bottom'
+                },
+                indicator: {
+                    dot: {
+                        w: 6,
+                        h: 6,
+                        r: 3,
+                        margin: 10
+                    },
+                    align: 'center',
+                    color: '#FFFFFF',
+                    activeColor: '#DA70D6'
+                }
+            },
+            placeholderImg: 'widget://image/apicloud-bg.png',
+            contentMode: 'scaleToFill',
+            interval: 4,
+            fixedOn: api.frameName,
+            loop: true,
+            fixed: false
+        }, function(ret, err) {
+            if (ret) {
+                console.log(JSON.stringify(ret));
+            } else {
+                alert(JSON.stringify(err));
+            }
+        });
+    }
+
+    function clickHeaderAction(tag) {
+        var headerLine = document.getElementById('headerLine');
+        var headerLine1 = document.getElementById('headerLine1');
+        var headerLine2 = document.getElementById('headerLine2');
+        var headerLine3 = document.getElementById('headerLine3');
+        switch (tag) {
+            case 0:
+                headerLine.hidden = '';
+                headerLine1.hidden = 'hidden';
+                headerLine2.hidden = 'hidden';
+                headerLine3.hidden = 'hidden';
+                break;
+            case 1:
+                headerLine.hidden = 'hidden';
+                headerLine1.hidden = '';
+                headerLine2.hidden = 'hidden';
+                headerLine3.hidden = 'hidden';
+                break;
+            case 2:
+                headerLine.hidden = 'hidden';
+                headerLine1.hidden = 'hidden';
+                headerLine2.hidden = '';
+                headerLine3.hidden = 'hidden';
+                break;
+                case 3:
+                    headerLine.hidden = 'hidden';
+                    headerLine1.hidden = 'hidden';
+                    headerLine2.hidden = 'hidden';
+                    headerLine3.hidden = '';
+                    break;
+            default:
+
+        }
+    }
+</script>
+
+</html>

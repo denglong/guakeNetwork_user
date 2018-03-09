@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav aui-bar-light" id="aui-header">
+        <a class="aui-btn aui-pull-left" tapmode onclick="closeWin()">
+            <span class="aui-iconfont aui-icon-left"></span>
+        </a>
+        <div class="aui-title">登录/注册</div>
+        <div class="aui-confont">
+        <p id="loginState" style="text-align:right; margin-right:15px; margin-left:75%; color:#999;" onclick="clickPwLoginAction()">密码登录</p>
+        </div>
+
+    </header>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+        var header = $api.byId('aui-header');
+        $api.fixStatusBar(header);
+        var headerPos = $api.offset(header);
+        var body_h = $api.offset($api.dom('body')).h;
+        api.openFrame({
+            name: 'login_frm',
+            url: 'login_frm.html',
+            bounces: true,
+            rect: {
+                x: 0,
+                y: headerPos.h,
+                w: 'auto',
+                h: 'auto'
+            }
+        })
+
+        api.addEventListener({
+            name: 'clickSMSLoginAction'
+        }, function(ret, err){
+            var clickState = ret.value.clickState;
+            var loginState = document.getElementById('loginState');
+            if (clickState == 'passwordLogin') {
+              loginState.innerText = '短信登录';
+            }
+            else {
+              loginState.innerText = '密码登录';
+            }
+        });
+    };
+
+    function closeWin(){
+        api.closeWin({
+        });
+    }
+
+    function clickPwLoginAction() {
+      var loginState = document.getElementById('loginState');
+      var clickState = 'passwordLogin';
+      if (loginState.innerText == '密码登录') {
+        clickState = 'passwordLogin';
+      }
+      else {
+        clickState = 'SMSLogin';
+      }
+      api.sendEvent({
+          name: 'clickPwLoginAction',
+          extra: {
+              clickState: clickState
+          }
+      });
+    }
+</script>
+</html>

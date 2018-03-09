@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>AUI快速完成布局</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style type="text/css">
+    .text-white {
+        color: #ffffff !important;
+    }
+    .aui-grid [class*=aui-col-] {
+        padding: 0.75rem 0;
+    }
+
+    .aui-content {
+      margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+  <section class="aui-content">
+      <ul class="aui-list aui-list-in aui-margin-b-10">
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-location aui-text-info"></i>
+              </div> -->
+              <div class="aui-list-item-inner aui-list-item-arrow">
+                  <div class="aui-list-item-title">个人信息</div>
+              </div>
+          </li>
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-like aui-text-danger"></i>
+              </div> -->
+              <div class="aui-list-item-inner aui-list-item-arrow">
+                  <div class="aui-list-item-title">换绑手机</div>
+              </div>
+          </li>
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-image aui-text-info"></i>
+              </div> -->
+              <div class="aui-list-item-inner aui-list-item-arrow">
+                  <div class="aui-list-item-title">一键登录设置</div>
+              </div>
+          </li>
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-image aui-text-info"></i>
+              </div> -->
+              <div class="aui-list-item-inner aui-list-item-arrow">
+                  <div class="aui-list-item-title">登录密码</div>
+              </div>
+          </li>
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-image aui-text-info"></i>
+              </div> -->
+              <div class="aui-list-item-inner">
+                  <div class="aui-list-item-title">清除缓存</div>
+                  <div class="aui-list-item-right">10M</div>
+              </div>
+          </li>
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-image aui-text-info"></i>
+              </div> -->
+              <div class="aui-list-item-inner aui-list-item-arrow">
+                  <div class="aui-list-item-title">关于呱客</div>
+              </div>
+          </li>
+      </ul>
+      <ul class="aui-list aui-list-in">
+          <li class="aui-list-item">
+              <!-- <div class="aui-list-item-label-icon">
+                  <i class="aui-iconfont aui-icon-cart aui-text-info"></i>
+              </div> -->
+              <div class="aui-list-item-inner">
+                  <div class="aui-list-item-title">消息提醒</div>
+                  <div class="aui-list-item-right">未开启</div>
+              </div>
+          </li>
+      </ul>
+  </section>
+  <!-- <section class="aui-content"> -->
+      <div style="height: 40px; width:100%;">
+          <div class="" style="width:100%; height:100%;">
+              <p style="color:#999; font-size:14px; margin-left:10px; padding:5px; text-align:left;">要开启或关闭，您可以在设置-通知-呱客 中更改</p>
+          </div>
+      </div>
+  <!-- </section> -->
+  <section class="aui-content">
+      <div style="height: 40px; width:100%;">
+          <div class="" style="width:100%; height:100%;" onclick="clickOutLoginAction()">
+              <p style="margin-left:15px; margin-right:15px; background-color:#fff; border-radius:5px; color:#333; font-size:16px; padding:8px; text-align:center;">退出登录</p>
+          </div>
+      </div>
+  </section>
+</body>
+<script type="text/javascript" src="../script/api.js" ></script>
+<script type="text/javascript">
+  apiready = function() {
+
+  };
+
+  function clickOutLoginAction() {
+    api.openWin({
+        name: 'login_win',
+        url: './login_win.html',
+        pageParam: {
+            name: 'login'
+        }
+    });
+  }
+</script>
+</html>

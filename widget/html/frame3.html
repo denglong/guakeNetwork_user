@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <style type="text/css">
+        .text-white {
+            color: #ffffff !important;
+        }
+
+        .aui-grid [class*=aui-col-] {
+            padding: 0.75rem 0;
+
+        }
+
+        .middleDiv {
+          height: 40px;
+          background-color: #eee;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .childDiv {
+            float: left;
+            width: 50%;
+            height: 100%;
+        }
+
+        .testTitle {
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+            height: 60px;
+            margin-top: 8px;
+            color: #333;
+            padding: 10px;
+        }
+
+        .downViewDiv {
+          height: 30px;
+          width: 100%;
+          margin-top: 50px;
+        }
+
+        .downTitle {
+          height: 100%;
+          width: 90%;
+          margin-left: 5%;
+          color: #333;
+          text-align: center;
+          border-radius: 4px;
+          background-color: white;
+          padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <section class="aui-content" id="user-info" onclick="clickHeaderAction()">
+        <div class="aui-list-item-media" style="width:15%; margin-left: 42.5%; margin-top: 15px;">
+            <img src="../image/demo1.png" class="aui-img-round">
+        </div>
+        <div class="" style="height:40px; width:100%;">
+            <p style="height:40px; text-align: center; padding:5px;">用户名</p>
+        </div>
+    </section>
+    <section class="aui-content aui-grid aui-margin-b-0">
+        <div class="aui-row">
+            <div class="aui-col-xs-4 aui-border-r" onclick="clickFirstViewAction(0)">
+                <big class="aui-text-warning">0.00<small> 币</small></big>
+                <div class="aui-gird-lable aui-font-size-14">呱币</div>
+            </div>
+            <div class="aui-col-xs-4 aui-border-r" onclick="clickFirstViewAction(1)">
+                <big class="aui-text-danger">0.00<small> 元</small></big>
+                <div class="aui-gird-lable aui-font-size-14">钱包</div>
+            </div>
+            <div class="aui-col-xs-4 aui-border-r" onclick="clickFirstViewAction(2)">
+                <big class="aui-text-success">0<small> pv</small></big>
+                <div class="aui-gird-lable aui-font-size-14">积分</div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content">
+      <div class="middleDiv">
+        <p>呱宝池目前累计金额：6789</p>
+      </div>
+    </section>
+    <section class="aui-content aui-grid aui-margin-b-0">
+        <div class="aui-row">
+            <div class="aui-col-xs-6 aui-border-r">
+              <div class="aui-list-item-media" style="width:30%; margin-left: 35%;">
+                  <img src="../image/demo1.png" class="aui-img-round">
+              </div>
+                <div class="aui-gird-lable aui-font-size-14">我的收藏</div>
+            </div>
+            <!-- <div class="aui-col-xs-4 aui-border-r">
+              <div class="aui-list-item-media" style="width:30%; margin-left: 35%;">
+                  <img src="../image/demo1.png" class="aui-img-round">
+              </div>
+                <div class="aui-gird-lable aui-font-size-14">我的评价</div>
+            </div> -->
+            <div class="aui-col-xs-6">
+              <div class="aui-list-item-media" style="width:30%; margin-left: 35%;">
+                  <img src="../image/demo1.png" class="aui-img-round">
+              </div>
+                <div class="aui-gird-lable aui-font-size-14">意见建议</div>
+            </div>
+        </div>
+    </section>
+    <section class="aui-content">
+      <div class="middleDiv">
+        <p style="text-align:left;">呱客合作</p>
+      </div>
+    </section>
+    <section class="aui-content">
+    <div class="container aui-margin-b-10" style="width:100%; height:60px; background-color:white;">
+        <div class="childDiv">
+            <p class="testTitle">享美食</p>
+        </div>
+        <div class="childDiv">
+            <p class="testTitle">住酒店</p>
+        </div>
+    </div>
+    </section>
+    <div class="downViewDiv">
+      <p class="downTitle">客服电话：400-000-8888</p>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        refreshAction();
+
+        api.addEventListener({
+            name: 'goToSetView'
+        }, function(ret, err){
+          api.openWin({
+              name: 'set_win',
+                      url: 'widget://html/set_win.html',
+              pageParam: {
+                  name: 'set_win'
+              }
+          });
+        });
+
+        api.addEventListener({
+            name: 'goToMessageView'
+        }, function(ret, err){
+          api.openWin({
+              name: 'message_win',
+              url: 'widget://html/message_win.html',
+              pageParam: {
+                  name: 'message_win'
+              }
+          });
+        });
+    }
+
+    //刷新事件
+    function refreshAction() {
+        api.setRefreshHeaderInfo({
+            visible: true,
+            loadingImg: 'widget://image/refresh.png',
+            bgColor: '#f5f5f5',
+            textColor: '#999',
+            textDown: '下拉刷新...',
+            textUp: '松开刷新...',
+            showTime: true
+        }, function(ret, err) {
+            api.refreshHeaderLoadDone();
+            console.log('刷新成功');
+        });
+    }
+
+    function clickHeaderAction() {
+        api.openWin({
+            name: 'login_win',
+            url: './login_win.html',
+            pageParam: {
+                name: 'login'
+            }
+        });
+    }
+
+    function clickFirstViewAction(tag) {
+      api.openWin({
+          name: 'moneyBox_win',
+                  url: './moneyBox_win.html',
+          pageParam: {
+              name: 'moneyBox_win'
+          }
+      });
+
+    }
+</script>
+
+</html>

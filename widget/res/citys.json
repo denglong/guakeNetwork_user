@@ -1,0 +1,20 @@
+{
+    "topCitys":[{
+                 "city": "北京",
+                 "id": 110001,
+                 "pinyin": "beijing"
+               },{
+                 "city": "天津",
+                 "id": 120001,
+                 "pinyin": "tianjin"
+               }],
+    "citys": [{
+                  "id": 110001,
+                  "city": "北京",
+                  "pinyin": "beijing"
+              },{
+                  "id": 120001,
+                  "city": "天津",
+                  "pinyin": "tianjin"
+             }]
+}

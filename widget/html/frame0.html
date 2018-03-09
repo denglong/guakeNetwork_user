@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-flex.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui-slide.css" />
+    <style type="text/css">
+        img.icon {
+            display: block;
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .aui-grid-label {
+            padding-top: 0.5rem;
+            font-size: 0.7rem !important;
+        }
+
+        .goods-item {
+            border: 1px solid #eee;
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .goods-item img {
+            display: block;
+            width: 100%;
+            height: 7rem;
+        }
+
+        .title {
+            color: #666;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .title p {
+            font-size: 0.6rem;
+            color: #ccc;
+        }
+
+        .goods-title {
+            font-size: 0.7rem;
+            color: #333 !important;
+        }
+
+        .hot img {
+            width: 3rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .aui-col-5 {
+            top: -10px;
+        }
+
+        .aui-grid-label {
+            top: -10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="aui-content">
+        <div id="aui-slide">
+            <div class="aui-slide-wrap">
+                <div class="aui-slide-node">
+                    <img src="../image/demo/b1.jpg" />
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../image/demo/b2.jpg" />
+                </div>
+                <div class="aui-slide-node">
+                    <img src="../image/demo/b3.jpg" />
+                </div>
+            </div>
+            <div class="aui-slide-page-wrap">
+                <!--分页容器-->
+            </div>
+        </div>
+    </section>
+    <section class="aui-margin-b-10" style="height:80px;">
+        <div class="aui-grid aui-padded-l-10 aui-padded-r-10">
+            <div class="aui-row aui-row-padded">
+                <div class="aui-col-5" onclick="clickClassifyAction(0)">
+                    <img src="../image/demo/i1.png" class="icon">
+                    <div class="aui-grid-label">美食</div>
+                </div>
+                <div class="aui-col-5" onclick="clickClassifyAction(1)">
+                    <img src="../image/demo/i3.png" class="icon">
+                    <div class="aui-grid-label">娱乐</div>
+                </div>
+                <div class="aui-col-5" onclick="clickClassifyAction(2)">
+                    <img src="../image/demo/i2.png" class="icon">
+                    <div class="aui-grid-label">休闲</div>
+                </div>
+                <div class="aui-col-5" onclick="clickClassifyAction(3)">
+                    <img src="../image/demo/i4.png" class="icon">
+                    <div class="aui-grid-label">酒店</div>
+                </div>
+                <div class="aui-col-5" onclick="clickClassifyAction(4)">
+                    <img src="../image/demo/i5.png" class="icon">
+                    <div class="aui-grid-label">更多</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div style="height:10px; width:100%; background-color:#f5f5f5;"></div>
+    <section class="aui-content aui-margin-b-10" style="background-color: #fff;">
+        <div class="aui-row aui-row-padded hot">
+            <div class="aui-col-xs-4 aui-padded-15 aui-border-r" style="height: 10rem;">
+                <h3 class="aui-text-danger">淘抢购</h3>
+                <p>可爱的你会喜欢</p>
+                <img src="../image/f1.jpg" style="width: 4.5rem;">
+            </div>
+            <div class="aui-col-xs-8 aui-padded-b-0 aui-padded-l-0">
+                <div class="aui-col-xs-12 aui-border-b" style="overflow: hidden; height: 4rem">
+                    <div class="aui-col-xs-9">
+                        <h3 class="aui-text-info">有好货</h3>
+                        <p>好品味从挑剔开始</p>
+                    </div>
+                    <div class="aui-col-xs-3"><img src="../image/f2.jpg"></div>
+                </div>
+                <div class="aui-col-xs-6 aui-border-r" style="height: 5.875rem;">
+                    <h5 class="aui-text-warning">爱逛街</h5>
+                    <p>疯狂赛车来袭</p>
+                    <img src="../image/f3.jpg">
+                </div>
+                <div class="aui-col-xs-6">
+                    <h5 class="aui-text-success">必买清单</h5>
+                    <p>都帮你整理好啦</p>
+                    <img src="../image/f5.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="middleAdDiv">
+        <div class="aui-slide-wrap">
+            <div class="aui-slide-node">
+                <img src="../image/demo/b1.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="aui-content aui-margin-b-10" style="margin-top:10px;">
+        <ul class="aui-list aui-media-list">
+            <li class="aui-list-item aui-list-item-middle" onclick="clickDetailAction()">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo5.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">流浪男</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo1.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">张三</div>
+                            <div class="aui-list-item-right">1天前</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo4.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">李四</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo4.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">李四</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="aui-list-item aui-list-item-middle">
+                <div class="aui-media-list-item-inner">
+                    <div class="aui-list-item-media wechat-avatar">
+                        <img src="../image/demo4.png" />
+                    </div>
+                    <div class="aui-list-item-inner">
+                        <div class="aui-list-item-text">
+                            <div class="aui-list-item-title">李四</div>
+                            <div class="aui-list-item-right">星期一</div>
+                        </div>
+                        <div class="aui-list-item-text aui-font-size-12">
+                            Hello AUI 2.0!
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui-slide.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        //createLoopImageAction();
+        refreshAction();
+
+        api.addEventListener({
+            name: 'clickAddAction'
+        }, function(ret, err) {
+            popAction();
+        });
+
+        api.addEventListener({
+            name: 'clickCityAction'
+        }, function(ret, err) {
+            console.log('000000');
+            api.openWin({
+                name: 'location_win',
+                url: './location_win.html',
+                pageParam: {
+                    name: 'location_win'
+                }
+            });
+
+        });
+
+        api.addEventListener({
+            name: 'clickSearchAction'
+        }, function(ret, err) {
+            console.log('111111');
+            var UISearchBar = api.require('UISearchBar');
+            UISearchBar.open({
+                placeholder: '请输入搜索关键字',
+                historyCount: 10,
+                showRecordBtn: false,
+                texts: {
+                    cancelText: '取消',
+                    clearText: '清除搜索记录'
+                },
+                styles: {
+                    navBar: {
+                        bgColor: '#FFFFFF',
+                        borderColor: '#ccc'
+                    },
+                    searchBox: {
+                        bgImg: '',
+                        color: '#000',
+                        height: 44,
+                        size: 14
+                    },
+                    cancel: {
+                        bg: 'rgba(0,0,0,0)',
+                        color: '#D2691E',
+                        size: 16
+                    },
+                    list: {
+                        color: '#696969',
+                        bgColor: '#FFFFFF',
+                        borderColor: '#eee',
+                        size: 16
+                    },
+                    clear: {
+                        color: '#000000',
+                        borderColor: '#ccc',
+                        size: 16
+                    }
+                }
+            }, function(ret, err) {
+                if (ret) {
+                    alert(JSON.stringify(ret));
+                } else {
+                    alert(JSON.stringify(err));
+                }
+            });
+        });
+    };
+
+    //刷新事件
+    function refreshAction() {
+        api.setRefreshHeaderInfo({
+            visible: true,
+            loadingImg: 'widget://image/refresh.png',
+            bgColor: '#f5f5f5',
+            textColor: '#999',
+            textDown: '下拉刷新...',
+            textUp: '松开刷新...',
+            showTime: true
+        }, function(ret, err) {
+            api.refreshHeaderLoadDone();
+            console.log('刷新成功');
+        });
+    }
+
+    //创建轮播图
+    function createLoopImageAction() {
+        var slideMiddle = new auiSlide({
+            container: document.getElementById("middleAdDiv"),
+            "height": api.winWidth / 3,
+        })
+
+        var slide = new auiSlide({
+            container: document.getElementById("aui-slide"),
+            "height": api.winWidth / 2,
+        })
+
+        var UIScrollPicture = api.require('UIScrollPicture');
+        UIScrollPicture.open({
+            rect: {
+                x: 0,
+                y: 0,
+                w: api.winWidth,
+                h: api.winWidth / 2
+            },
+            data: {
+                paths: [
+                    'widget://image/apicloud-bg.png',
+                    'widget://image/apicloud-bg.png',
+                    'widget://image/apicloud-bg.png',
+                    'widget://image/apicloud-bg.png'
+                ],
+                // captions: ['apicloud', 'apicloud', 'apicloud', 'apicloud']
+            },
+            styles: {
+                caption: {
+                    height: 35,
+                    color: '#E0FFFF',
+                    size: 13,
+                    bgColor: '#696969',
+                    position: 'bottom'
+                },
+                indicator: {
+                    dot: {
+                        w: 6,
+                        h: 6,
+                        r: 3,
+                        margin: 10
+                    },
+                    align: 'center',
+                    color: '#FFFFFF',
+                    activeColor: '#DA70D6'
+                }
+            },
+            placeholderImg: 'widget://image/apicloud-bg.png',
+            contentMode: 'scaleToFill',
+            interval: 4,
+            fixedOn: api.frameName,
+            loop: true,
+            fixed: false
+        }, function(ret, err) {
+            if (ret) {
+                console.log(JSON.stringify(ret));
+            } else {
+                alert(JSON.stringify(err));
+            }
+        });
+    }
+
+    function popAction() {
+        var mnPopups = api.require('MNPopups');
+        mnPopups.open({
+            rect: {
+                w: 120,
+                h: 135
+            },
+            position: {
+                x: api.winWidth - 20,
+                y: 65
+            },
+            styles: {
+                mask: 'rgba(0,0,0,0.1)',
+                bg: '#ccc',
+                cell: {
+                    bg: {
+                        normal: '#ccc',
+                        highlight: '',
+                    },
+                    h: 45,
+                    title: {
+                        marginL: 40,
+                        color: '#636363',
+                        size: 13,
+                    },
+                    icon: {
+                        marginL: 10,
+                        w: 25,
+                        h: 25,
+                        corner: 2
+                    }
+                },
+                pointer: {
+                    size: 7,
+                    xPercent: 90,
+                    yPercent: 0,
+                    orientation: 'downward'
+                }
+            },
+            datas: [{
+                title: '扫一扫',
+                icon: 'widget://image/share/qq.png'
+            }, {
+                title: '付款码',
+                icon: 'widget://image/share/qq.png'
+            }, {
+                title: '收款码',
+                icon: 'widget://image/share/qq.png'
+            }],
+            animation: false
+        }, function(ret) {
+            switch (ret.index) {
+                case 0:
+                    console.log('扫一扫');
+                    break;
+                case 1:
+                    console.log('付款码');
+                    break;
+                case 2:
+                    console.log('收款码');
+                    break;
+                default:
+
+            }
+        });
+    }
+
+    function clickDetailAction() {
+        api.openWin({
+            name: 'detail_win',
+            url: './detail_win.html',
+            pageParam: {
+                name: 'detail'
+            }
+        });
+    }
+
+    function clickClassifyAction(tag) {
+        var nameTitle;
+        switch (tag) {
+            case 0:
+                console.log('美食');
+                break;
+            case 1:
+                console.log('娱乐');
+                break;
+            case 2:
+                console.log('休闲');
+                break;
+            case 3:
+                console.log('酒店');
+                break;
+            case 4:
+                console.log('更多');
+                break;
+            default:
+
+        }
+        api.openWin({
+            name: 'classify_win',
+            url: './classify_win.html',
+            pageParam: {
+                name: 'classify_win'
+            }
+        });
+    }
+</script>
+
+</html>
